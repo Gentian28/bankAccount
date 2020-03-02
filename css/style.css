@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro';
+    font-size: 16px;
+    margin: 0;
+    background: #000000;
+    color: #ffffff;
+    position: relative;
+}
+#actions {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#actions article {
+    display: flex;
+    flex-flow: column;
+}
+
+.action {
+    color: #ffffff;
+    background: #333333;
+    border: none;
+    font-size: 1.1rem;
+    text-align: left;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.action:hover {
+    cursor: pointer;
+}
+
+#actions article:first-child .action {
+    padding: 15px 30px 15px 40px;
+    border-radius: 0 50px 50px 0;
+    left: -20px;
+    transition-property: left, box-shadow;
+    transition-duration: .3s, .4s;
+}
+
+
+#actions article:first-child .action:hover {
+    box-shadow: 0 0 0 2pt #1976d2;
+    left: 0;
+}
+
+#actions article:first-child .action:first-child {
+    margin-bottom: 25px;
+}
+
+#actions article:last-child .action {
+    padding: 15px 40px 15px 30px;
+    border-radius: 50px 0 0 50px;
+    right: -20px;
+    transition-property: right, box-shadow;
+    transition-duration: .3s, .4s;
+}
+
+#actions article:last-child .action:hover {
+    box-shadow: 0 0 0 2pt #1976d2;
+    right: 0;
+}
+
+#actions article:last-child .action:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+#actionTemplate {
+    padding: 25px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.withdraOrDeposit {
+    display: flex;
+    flex-flow: column;
+}
+
+.withdraOrDeposit > *:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.withdraOrDeposit input {
+    color: #ffffff;
+    background: #333333;
+    border: none;
+    font-size: 1rem;
+    transition: box-shadow .25s;
+    padding: 12px 20px;
+    border-radius: 15px;
+}
+
+.withdraOrDeposit input:focus {
+    box-shadow: 0 0 0 2pt #1976d2;
+}
+
+#submitDepositBtn, #submitWithdrawBtn {
+    width: max-content;
+    background: #1976d2;
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    padding: 12px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+#goBackBtn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: max-content;
+}
+
+.back-symbol {
+    font-size: 30px;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+
+#depositedAmounts, #withdrownAmounts, #balanceRoute section{
+    font-size: 1.2rem;
+}
+#depositedAmounts li:not(:last-child), #withdrownAmounts li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+#errorMessage {
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 25px;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    border-radius: 10px;
+    transition: top .5s;
+}

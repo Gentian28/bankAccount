@@ -4,26 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank</title>
-    <script src="app.js" defer type="module"></script>
+    <title>Bank Account</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer type="module"></script>
 </head>
 
 <body>
-    <div id="actions">
-        <button class="action" data-action-type="withdraw">Terhiq</button>
-        <button class="action" data-action-type="deposit">Depozito</button>
-        <button class="action" data-action-type="balance">Balanci</button>
-        <button class="action" data-action-type="getDeposits">Depozitimet</button>
-        <button class="action" data-action-type="getWithdraws">Terheqjet</button>
-    </div>
+    <section id="actions">
+        <article>
+            <button class="action" data-action-type="deposit">Depozito</button>
+            <button class="action" data-action-type="withdraw">Terhiq</button>
+        </article>
+        <article>
+            <button class="action" data-action-type="balance">Gjendja e llogarise</button>
+            <button class="action" data-action-type="getDeposits">Depozitimet</button>
+            <button class="action" data-action-type="getWithdraws">Terheqjet</button>
+        </article>
+    </section>
 
-    <div id="userAction"></div>
+    <section id="actionTemplate"></section>
 
-    <div id="actionTemplate"></div>
-
-    <div id="balance"></div>
-    <!-- <input type="text" id="withdrawAmount" placeholder="value">
-    <button id="submit" onclick="">withdraw</button> -->
+    <article id="errorMessage"></article>
 </body>
 
 </html>
