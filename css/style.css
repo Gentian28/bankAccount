@@ -87,6 +87,7 @@ body {
     padding: 25px;
     max-width: 500px;
     margin: auto;
+    display: none;
 }
 
 .withdraOrDeposit {

@@ -36,10 +36,7 @@ function submitWithdraw() {
     }
     catch (error) {
         displayErrorMessage(error.message);
-        console.log(error);
     }
-    console.log(account);
-    console.log(account.withdraws);
 }
 
 function submitDeposit() {
@@ -51,11 +48,7 @@ function submitDeposit() {
     }
     catch (error) {
         displayErrorMessage(error.message);
-        console.log(error);
     }
-
-    console.log(account);
-    console.log(account.deposits);
 }
 
 function getBalance() {

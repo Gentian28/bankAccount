@@ -1,12 +1,11 @@
 import formatDate from './formatDate.js';
 
-class Account {
-    _name;
-    _balance = 0;
-    _transactions = [];
+export default class Account {
 
     constructor(name) {
         this._name = name;
+        this._balance = 0;
+        this._transactions = [];
     }
 
     withdraw(amount) {
@@ -53,5 +52,3 @@ class Account {
         return this._transactions.filter(transaction => transaction.action === 'deposit');
     }
 }
-
-export default Account;
